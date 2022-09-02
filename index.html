@@ -22,6 +22,12 @@
                 noWrap: true,
             }).addTo(map);
 
+            //Drag boundary
+            var bounds = L.latLngBounds([[12.5, 121.5], [13.5, 122.5]]);
+            map.setMaxBounds(bounds);
+            map.on('drag', function() {
+	        map.panInsideBounds(bounds, { animate: false });
+            });
         </script>
     </body>
 </html>
