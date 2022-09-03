@@ -66,48 +66,54 @@
             ];
 
             for(var i = 0; i < suclist.length; i++){
-                circle = new L.circle([suclist[i][1], suclist[i][2]], 500,{
-                    stroke: true,
-                    weight: 3,
-                }).bindPopup(suclist[i][0]).addTo(map);
                     if(suclist[i][3] == 1){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]], 500,{
+                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
                         color: 'blue',
                         fillColor: 'blue',
                         fillOpacity: .5,
-                        radius: 50
+                        stroke: true,
+                        weight: 3,
+                        radius: 200
                     }).bindPopup(suclist[i][0]).addTo(map);}
 
                     else if(suclist[i][3] == 2){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]], 500,{
+                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
                         color: 'red',
                         fillColor: 'red',
                         fillOpacity: .5,
-                        radius: 100
+                        stroke: true,
+                        weight: 3,
+                        radius: 400
                     }).bindPopup(suclist[i][0]).addTo(map);
                     }
                     else if(suclist[i][3] == 3){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]], 500,{
+                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
                         color: 'green',
                         fillColor: 'green',
                         fillOpacity: .5,
-                        radius: 150
+                        stroke: true,
+                        weight: 3,
+                        radius: 600
                     }).bindPopup(suclist[i][0]).addTo(map);
                     }
                     else if(suclist[i][3] == 4){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]], 500,{
+                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
                         color: 'orange',
                         fillColor: 'orange',
                         fillOpacity: .5,
-                        radius: 200
+                        stroke: true,
+                        weight: 3,
+                        radius: 800
                     }).bindPopup(suclist[i][0]).addTo(map);
                     }
                     else if(suclist[i][3] == 5){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]], 500,{
+                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
                         color: 'black',
                         fillColor: 'black',
                         fillOpacity: .5,
-                        radius: 250
+                        stroke: true,
+                        weight: 3,
+                        radius: 1000
                     }).bindPopup(suclist[i][0]).addTo(map);
                     }
             }        
