@@ -10,14 +10,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     </head>
     <body>
-            Search bar-->
+            <!--Search bar-->
             <div class="search-box">
-                <input class="search-txt" type="text" name="" placeholder="Search SUC">
-                <a class="search-btn" href="#">
-                    <i class="bi bi-search"></i>
+                <input class="search-txt" type="text" name="suc" id="searchbox" placeholder="Search SUC"  onclick="timeoutFunc()">
+                <a class="search-btn" href="#" onclick="return search()">
+                    <i id="search" onclick="return search()" class="bi bi-search"></i>
                 </a>
             </div>
-            
         <div id = "map"></div>
         <!--Map-->
         </div>
@@ -220,8 +219,50 @@
                         weight: 3,
                         radius: 1000
                     }).bindPopup(suclist[i][0]).addTo(map);
+                }
+            } 
+
+            //var marker = null;
+            //var suc = "RTU";
+            function search(){
+                var suc = document.getElementById("searchbox").value;
+                map.setZoom(15);
+                for(var i = 0; i < suclist.length; i++){
+                result = suc.localeCompare(suclist[i][0]);
+                if(result == 0){
+                        marker = L.marker([suclist[i][1], suclist[i][2]]);
+                        map.addLayer(marker);
+                        map.panTo(new L.LatLng(suclist[i][1], suclist[i][2]));
+                        //var marker = L.marker([14.5746, 121.0423]).addTo(map);
+                        break;
+                }
+                else if(i == suclist.length - 1){
+                    alert("No SUC found");
                     }
-            }        
+                }
+            }
+
+            /*let timeout;
+
+            function timeoutFunc(){
+                timeout = setTimeout(clear, 3000);
+            }
+
+            function clear(){
+                map.removeLayer(marker);
+            }
+
+            map.on('clear', function (e){
+                if(marker !== null){
+                    map.removeLayer(marker);
+                }
+                marker = L.marker(e.LatLng).addTo(map);
+            });
+
+            document.getElementById("suc").onclick = function () {
+                timeoutFunc(this);  
+            };  */
+
         </script>
     </body>
 </html>
