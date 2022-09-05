@@ -25,7 +25,53 @@
     transition: opacity 30s;  
     z-index: 1;
 }
-.search-box:hover{
+.legend-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -800%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+	opacity: 0.1;
+    transition: opacity 30s;  
+    padding: 10px;
+    z-index: 1;
+}
+.legend-txt{
+	color: white;
+    float: right;
+    width: 500px;
+    height: 20px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+.dot {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-left: 5px;
+	display: inline-block;
+	margin-left: 5px;
+}
+#level_1{
+	background-color: blue;
+}
+#level_2{
+	background-color: red;
+}
+#level_3{
+	background-color: green;
+}
+#level_4{
+	background-color: yellow;
+}
+#level_5{
+	background-color: black;
+}
+.search-box:hover, .legend-box:hover{
     transition: opacity 1s;  
     opacity: 1;
 }
