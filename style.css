@@ -4,6 +4,115 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    position: relative;
+    min-height: 1000vh;
+    width: 100%;
+    overflow: hidden;
+}
+.sidebar{
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   height: 100%;
+   width: 78px;
+   background: #2f3640;
+   padding: 6px 14px;
+   transition: all 0.5s ease;
+   z-index: 1;
+}
+.sidebar.active{
+    width: 300px;
+}
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .sidebar .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+.logo_content .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    left: 90%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%)
+}
+.active .sidebar #btn{
+    left: 90%;
+}
+.sidebar ul{
+    margin-left: -10px;
+    margin-top: 20px;
+}
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    margin-left: -15px;
+    margin-top: 5px;
+}
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    padding-left: 10px;
+}
+.sidebar ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 40px;
+    font-size: 18px;
+    color: #fff;
+}
+.sidebar ul li #searchBtn{
+    padding-left: 10px;
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 18px;
+}
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
 #map{
     position: absolute; 
     top: 0; 
