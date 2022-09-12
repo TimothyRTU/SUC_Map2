@@ -20,6 +20,26 @@
 				<span class="dot" id="level_5"></span>Level 5
 			</p>
 		</div>
+        <div class="hidden-legend">
+            <p class="legend-txt">Legend: </p>
+                <ul>
+                    <li>
+                        <span class="dot" id="level_1"></span> Level 1
+                    </li>
+                    <li>
+                        <span class="dot" id="level_2"></span> Level 2
+                    </li>
+                    <li>
+                        <span class="dot" id="level_3"></span> Level 3
+                    </li>
+                    <li>
+                        <span class="dot" id="level_4"></span> Level 4
+                    </li>
+                    <li>
+                        <span class="dot" id="level_5"></span> Level 5
+                    </li>
+                </ul>
+        </div>
         <!--Search bar-->
         <div class="search-box">
             <input class="search-txt" type="text" name="suc" id="searchbox" placeholder="Search SUC"  onclick="timeoutFunc()">
@@ -183,53 +203,53 @@
 
             for(var i = 0; i < suclist.length; i++){
                     if(suclist[i][3] == 1){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
+                    circle = new L.circleMarker([suclist[i][1], suclist[i][2]],{
                         color: 'blue',
                         fillColor: 'blue',
                         fillOpacity: .5,
                         stroke: true,
                         weight: 3,
-                        radius: 250
+                        radius: 6
                     }).bindPopup(suclist[i][0]).addTo(map);}
 
                     else if(suclist[i][3] == 2){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
+                    circle = new L.circleMarker([suclist[i][1], suclist[i][2]],{
                         color: 'red',
                         fillColor: 'red',
                         fillOpacity: .5,
                         stroke: true,
                         weight: 3,
-                        radius: 400
+                        radius: 7
                     }).bindPopup(suclist[i][0]).addTo(map);
                     }
                     else if(suclist[i][3] == 3){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
+                    circle = new L.circleMarker([suclist[i][1], suclist[i][2]],{
                         color: 'green',
                         fillColor: 'green',
                         fillOpacity: .5,
                         stroke: true,
                         weight: 3,
-                        radius: 600
+                        radius: 8
                     }).bindPopup(suclist[i][0]).addTo(map);
                     }
                     else if(suclist[i][3] == 4){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
+                    circle = new L.circleMarker([suclist[i][1], suclist[i][2]],{
                         color: 'orange',
                         fillColor: 'orange',
                         fillOpacity: .5,
                         stroke: true,
                         weight: 3,
-                        radius: 800
+                        radius: 9
                     }).bindPopup(suclist[i][0]).addTo(map);
                     }
                     else if(suclist[i][3] == 5){
-                    circle = new L.circle([suclist[i][1], suclist[i][2]],{
+                    circle = new L.circleMarker([suclist[i][1], suclist[i][2]],{
                         color: 'black',
                         fillColor: 'black',
                         fillOpacity: .5,
                         stroke: true,
                         weight: 3,
-                        radius: 1000
+                        radius: 10
                     }).bindPopup(suclist[i][0]).addTo(map);
                 }
             } 
